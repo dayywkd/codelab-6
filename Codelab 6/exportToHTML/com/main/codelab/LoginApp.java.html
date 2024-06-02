@@ -1,0 +1,151 @@
+<html>
+<head>
+<title>LoginApp.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #6aab73;}
+.s4 { color: #7a7e85;}
+.s5 { color: #2aacb8;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+LoginApp.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">com</span><span class="s2">.</span><span class="s1">main</span><span class="s2">.</span><span class="s1">codelab</span><span class="s2">;</span>
+
+<span class="s0">import </span><span class="s1">javafx</span><span class="s2">.</span><span class="s1">application</span><span class="s2">.</span><span class="s1">Application</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">javafx</span><span class="s2">.</span><span class="s1">scene</span><span class="s2">.</span><span class="s1">Scene</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">javafx</span><span class="s2">.</span><span class="s1">scene</span><span class="s2">.</span><span class="s1">control</span><span class="s2">.*;</span>
+<span class="s0">import </span><span class="s1">javafx</span><span class="s2">.</span><span class="s1">scene</span><span class="s2">.</span><span class="s1">layout</span><span class="s2">.</span><span class="s1">GridPane</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">javafx</span><span class="s2">.</span><span class="s1">scene</span><span class="s2">.</span><span class="s1">layout</span><span class="s2">.</span><span class="s1">HBox</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">javafx</span><span class="s2">.</span><span class="s1">geometry</span><span class="s2">.</span><span class="s1">Pos</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">javafx</span><span class="s2">.</span><span class="s1">geometry</span><span class="s2">.</span><span class="s1">Insets</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">javafx</span><span class="s2">.</span><span class="s1">scene</span><span class="s2">.</span><span class="s1">paint</span><span class="s2">.</span><span class="s1">Color</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">javafx</span><span class="s2">.</span><span class="s1">scene</span><span class="s2">.</span><span class="s1">text</span><span class="s2">.</span><span class="s1">Font</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">javafx</span><span class="s2">.</span><span class="s1">scene</span><span class="s2">.</span><span class="s1">text</span><span class="s2">.</span><span class="s1">FontWeight</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">javafx</span><span class="s2">.</span><span class="s1">scene</span><span class="s2">.</span><span class="s1">text</span><span class="s2">.</span><span class="s1">Text</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">javafx</span><span class="s2">.</span><span class="s1">stage</span><span class="s2">.</span><span class="s1">Stage</span><span class="s2">;</span>
+
+<span class="s0">public class </span><span class="s1">LoginApp </span><span class="s0">extends </span><span class="s1">Application </span><span class="s2">{</span>
+
+    <span class="s0">private </span><span class="s1">Stage primaryStage</span><span class="s2">;</span>
+
+    <span class="s1">@Override</span>
+    <span class="s0">public void </span><span class="s1">start</span><span class="s2">(</span><span class="s1">Stage primaryStage</span><span class="s2">) {</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">primaryStage </span><span class="s2">= </span><span class="s1">primaryStage</span><span class="s2">;</span>
+        <span class="s1">primaryStage</span><span class="s2">.</span><span class="s1">setTitle</span><span class="s2">(</span><span class="s3">&quot;Login&quot;</span><span class="s2">);</span>
+
+        <span class="s4">// Create GridPane layout</span>
+        <span class="s1">GridPane grid </span><span class="s2">= </span><span class="s0">new </span><span class="s1">GridPane</span><span class="s2">();</span>
+        <span class="s1">grid</span><span class="s2">.</span><span class="s1">setAlignment</span><span class="s2">(</span><span class="s1">Pos</span><span class="s2">.</span><span class="s1">CENTER</span><span class="s2">);</span>
+        <span class="s1">grid</span><span class="s2">.</span><span class="s1">setHgap</span><span class="s2">(</span><span class="s5">10</span><span class="s2">);</span>
+        <span class="s1">grid</span><span class="s2">.</span><span class="s1">setVgap</span><span class="s2">(</span><span class="s5">10</span><span class="s2">);</span>
+        <span class="s1">grid</span><span class="s2">.</span><span class="s1">setPadding</span><span class="s2">(</span><span class="s0">new </span><span class="s1">Insets</span><span class="s2">(</span><span class="s5">25</span><span class="s2">, </span><span class="s5">25</span><span class="s2">, </span><span class="s5">25</span><span class="s2">, </span><span class="s5">25</span><span class="s2">));</span>
+
+        <span class="s1">Scene scene </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Scene</span><span class="s2">(</span><span class="s1">grid</span><span class="s2">, </span><span class="s5">300</span><span class="s2">, </span><span class="s5">275</span><span class="s2">);</span>
+        <span class="s1">primaryStage</span><span class="s2">.</span><span class="s1">setScene</span><span class="s2">(</span><span class="s1">scene</span><span class="s2">);</span>
+
+        <span class="s4">// Add UI elements</span>
+        <span class="s1">Text scenetitle </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Text</span><span class="s2">(</span><span class="s3">&quot;Welcome&quot;</span><span class="s2">);</span>
+        <span class="s1">scenetitle</span><span class="s2">.</span><span class="s1">setFont</span><span class="s2">(</span><span class="s1">Font</span><span class="s2">.</span><span class="s1">font</span><span class="s2">(</span><span class="s3">&quot;Tahoma&quot;</span><span class="s2">, </span><span class="s1">FontWeight</span><span class="s2">.</span><span class="s1">NORMAL</span><span class="s2">, </span><span class="s5">20</span><span class="s2">));</span>
+        <span class="s1">grid</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s1">scenetitle</span><span class="s2">, </span><span class="s5">0</span><span class="s2">, </span><span class="s5">0</span><span class="s2">, </span><span class="s5">2</span><span class="s2">, </span><span class="s5">1</span><span class="s2">);</span>
+
+        <span class="s1">Label userName </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Label</span><span class="s2">(</span><span class="s3">&quot;User Name:&quot;</span><span class="s2">);</span>
+        <span class="s1">grid</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s1">userName</span><span class="s2">, </span><span class="s5">0</span><span class="s2">, </span><span class="s5">1</span><span class="s2">);</span>
+
+        <span class="s1">TextField userTextField </span><span class="s2">= </span><span class="s0">new </span><span class="s1">TextField</span><span class="s2">();</span>
+        <span class="s1">grid</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s1">userTextField</span><span class="s2">, </span><span class="s5">1</span><span class="s2">, </span><span class="s5">1</span><span class="s2">);</span>
+
+        <span class="s1">Label pw </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Label</span><span class="s2">(</span><span class="s3">&quot;Password:&quot;</span><span class="s2">);</span>
+        <span class="s1">grid</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s1">pw</span><span class="s2">, </span><span class="s5">0</span><span class="s2">, </span><span class="s5">2</span><span class="s2">);</span>
+
+        <span class="s1">PasswordField pwBox </span><span class="s2">= </span><span class="s0">new </span><span class="s1">PasswordField</span><span class="s2">();</span>
+        <span class="s1">grid</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s1">pwBox</span><span class="s2">, </span><span class="s5">1</span><span class="s2">, </span><span class="s5">2</span><span class="s2">);</span>
+
+        <span class="s1">Button btn </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Button</span><span class="s2">(</span><span class="s3">&quot;Sign in&quot;</span><span class="s2">);</span>
+        <span class="s1">HBox hbBtn </span><span class="s2">= </span><span class="s0">new </span><span class="s1">HBox</span><span class="s2">(</span><span class="s5">10</span><span class="s2">);</span>
+        <span class="s1">hbBtn</span><span class="s2">.</span><span class="s1">setAlignment</span><span class="s2">(</span><span class="s1">Pos</span><span class="s2">.</span><span class="s1">BOTTOM_RIGHT</span><span class="s2">);</span>
+        <span class="s1">hbBtn</span><span class="s2">.</span><span class="s1">getChildren</span><span class="s2">().</span><span class="s1">add</span><span class="s2">(</span><span class="s1">btn</span><span class="s2">);</span>
+        <span class="s1">grid</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s1">hbBtn</span><span class="s2">, </span><span class="s5">1</span><span class="s2">, </span><span class="s5">4</span><span class="s2">);</span>
+
+        <span class="s0">final </span><span class="s1">Text actiontarget </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Text</span><span class="s2">();</span>
+        <span class="s1">grid</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s1">actiontarget</span><span class="s2">, </span><span class="s5">1</span><span class="s2">, </span><span class="s5">6</span><span class="s2">);</span>
+
+        <span class="s4">// Method to handle login</span>
+        <span class="s1">Runnable loginAction </span><span class="s2">= () </span><span class="s1">-&gt; </span><span class="s2">{</span>
+            <span class="s0">if </span><span class="s2">(</span><span class="s3">&quot;Udaywakid&quot;</span><span class="s2">.</span><span class="s1">equals</span><span class="s2">(</span><span class="s1">userTextField</span><span class="s2">.</span><span class="s1">getText</span><span class="s2">()) &amp;&amp; </span><span class="s3">&quot;7890&quot;</span><span class="s2">.</span><span class="s1">equals</span><span class="s2">(</span><span class="s1">pwBox</span><span class="s2">.</span><span class="s1">getText</span><span class="s2">())) {</span>
+                <span class="s1">actiontarget</span><span class="s2">.</span><span class="s1">setFill</span><span class="s2">(</span><span class="s1">Color</span><span class="s2">.</span><span class="s1">GREEN</span><span class="s2">);</span>
+                <span class="s1">actiontarget</span><span class="s2">.</span><span class="s1">setText</span><span class="s2">(</span><span class="s3">&quot;Login Successful&quot;</span><span class="s2">);</span>
+                <span class="s1">showWelcomePage</span><span class="s2">(</span><span class="s1">primaryStage</span><span class="s2">);</span>
+            <span class="s2">} </span><span class="s0">else </span><span class="s2">{</span>
+                <span class="s1">actiontarget</span><span class="s2">.</span><span class="s1">setFill</span><span class="s2">(</span><span class="s1">Color</span><span class="s2">.</span><span class="s1">FIREBRICK</span><span class="s2">);</span>
+                <span class="s1">actiontarget</span><span class="s2">.</span><span class="s1">setText</span><span class="s2">(</span><span class="s3">&quot;Username/Password Salah&quot;</span><span class="s2">);</span>
+            <span class="s2">}</span>
+        <span class="s2">};</span>
+
+        <span class="s4">// Set action for button click</span>
+        <span class="s1">btn</span><span class="s2">.</span><span class="s1">setOnAction</span><span class="s2">(</span><span class="s1">e -&gt; loginAction</span><span class="s2">.</span><span class="s1">run</span><span class="s2">());</span>
+
+        <span class="s4">// Set action for pressing Enter key</span>
+        <span class="s1">pwBox</span><span class="s2">.</span><span class="s1">setOnKeyPressed</span><span class="s2">(</span><span class="s1">event -&gt; </span><span class="s2">{</span>
+            <span class="s0">switch </span><span class="s2">(</span><span class="s1">event</span><span class="s2">.</span><span class="s1">getCode</span><span class="s2">()) {</span>
+                <span class="s0">case </span><span class="s1">ENTER</span><span class="s2">:</span>
+                    <span class="s1">loginAction</span><span class="s2">.</span><span class="s1">run</span><span class="s2">();</span>
+                    <span class="s0">break</span><span class="s2">;</span>
+                <span class="s0">default</span><span class="s2">:</span>
+                    <span class="s0">break</span><span class="s2">;</span>
+            <span class="s2">}</span>
+        <span class="s2">});</span>
+
+        <span class="s1">userTextField</span><span class="s2">.</span><span class="s1">setOnKeyPressed</span><span class="s2">(</span><span class="s1">event -&gt; </span><span class="s2">{</span>
+            <span class="s0">switch </span><span class="s2">(</span><span class="s1">event</span><span class="s2">.</span><span class="s1">getCode</span><span class="s2">()) {</span>
+                <span class="s0">case </span><span class="s1">ENTER</span><span class="s2">:</span>
+                    <span class="s1">loginAction</span><span class="s2">.</span><span class="s1">run</span><span class="s2">();</span>
+                    <span class="s0">break</span><span class="s2">;</span>
+                <span class="s0">default</span><span class="s2">:</span>
+                    <span class="s0">break</span><span class="s2">;</span>
+            <span class="s2">}</span>
+        <span class="s2">});</span>
+
+        <span class="s1">primaryStage</span><span class="s2">.</span><span class="s1">show</span><span class="s2">();</span>
+    <span class="s2">}</span>
+
+    <span class="s0">private void </span><span class="s1">showWelcomePage</span><span class="s2">(</span><span class="s1">Stage stage</span><span class="s2">) {</span>
+        <span class="s1">GridPane welcomeGrid </span><span class="s2">= </span><span class="s0">new </span><span class="s1">GridPane</span><span class="s2">();</span>
+        <span class="s1">welcomeGrid</span><span class="s2">.</span><span class="s1">setAlignment</span><span class="s2">(</span><span class="s1">Pos</span><span class="s2">.</span><span class="s1">CENTER</span><span class="s2">);</span>
+        <span class="s1">welcomeGrid</span><span class="s2">.</span><span class="s1">setHgap</span><span class="s2">(</span><span class="s5">10</span><span class="s2">);</span>
+        <span class="s1">welcomeGrid</span><span class="s2">.</span><span class="s1">setVgap</span><span class="s2">(</span><span class="s5">10</span><span class="s2">);</span>
+        <span class="s1">welcomeGrid</span><span class="s2">.</span><span class="s1">setPadding</span><span class="s2">(</span><span class="s0">new </span><span class="s1">Insets</span><span class="s2">(</span><span class="s5">25</span><span class="s2">, </span><span class="s5">25</span><span class="s2">, </span><span class="s5">25</span><span class="s2">, </span><span class="s5">25</span><span class="s2">));</span>
+
+        <span class="s1">Scene welcomeScene </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Scene</span><span class="s2">(</span><span class="s1">welcomeGrid</span><span class="s2">, </span><span class="s5">300</span><span class="s2">, </span><span class="s5">275</span><span class="s2">);</span>
+        <span class="s1">stage</span><span class="s2">.</span><span class="s1">setScene</span><span class="s2">(</span><span class="s1">welcomeScene</span><span class="s2">);</span>
+
+        <span class="s1">Text welcomeText </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Text</span><span class="s2">(</span><span class="s3">&quot;Hello Udaywakid!</span><span class="s0">\n</span><span class="s3">Welcome to Codelab!!&quot;</span><span class="s2">);</span>
+        <span class="s1">welcomeText</span><span class="s2">.</span><span class="s1">setFont</span><span class="s2">(</span><span class="s1">Font</span><span class="s2">.</span><span class="s1">font</span><span class="s2">(</span><span class="s3">&quot;Tahoma&quot;</span><span class="s2">, </span><span class="s1">FontWeight</span><span class="s2">.</span><span class="s1">NORMAL</span><span class="s2">, </span><span class="s5">20</span><span class="s2">));</span>
+        <span class="s1">welcomeGrid</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s1">welcomeText</span><span class="s2">, </span><span class="s5">0</span><span class="s2">, </span><span class="s5">0</span><span class="s2">, </span><span class="s5">2</span><span class="s2">, </span><span class="s5">1</span><span class="s2">);</span>
+
+        <span class="s1">Button btnl </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Button</span><span class="s2">(</span><span class="s3">&quot;Back&quot;</span><span class="s2">);</span>
+        <span class="s1">HBox hbBtnl </span><span class="s2">= </span><span class="s0">new </span><span class="s1">HBox</span><span class="s2">(</span><span class="s5">10</span><span class="s2">);</span>
+        <span class="s1">hbBtnl</span><span class="s2">.</span><span class="s1">setAlignment</span><span class="s2">(</span><span class="s1">Pos</span><span class="s2">.</span><span class="s1">BOTTOM_CENTER</span><span class="s2">);</span>
+        <span class="s1">hbBtnl</span><span class="s2">.</span><span class="s1">getChildren</span><span class="s2">().</span><span class="s1">add</span><span class="s2">(</span><span class="s1">btnl</span><span class="s2">);</span>
+        <span class="s1">welcomeGrid</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s1">hbBtnl</span><span class="s2">, </span><span class="s5">1</span><span class="s2">, </span><span class="s5">1</span><span class="s2">);</span>
+
+        <span class="s1">btnl</span><span class="s2">.</span><span class="s1">setOnAction</span><span class="s2">(</span><span class="s1">e -&gt; </span><span class="s2">{</span>
+            <span class="s1">stage</span><span class="s2">.</span><span class="s1">setScene</span><span class="s2">(</span><span class="s1">primaryStage</span><span class="s2">.</span><span class="s1">getScene</span><span class="s2">());</span>
+        <span class="s2">});</span>
+
+        <span class="s1">stage</span><span class="s2">.</span><span class="s1">show</span><span class="s2">();</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public static void </span><span class="s1">main</span><span class="s2">(</span><span class="s1">String</span><span class="s2">[] </span><span class="s1">args</span><span class="s2">) {</span>
+        <span class="s1">launch</span><span class="s2">(</span><span class="s1">args</span><span class="s2">);</span>
+    <span class="s2">}</span>
+<span class="s2">}</span></pre>
+</body>
+</html>
